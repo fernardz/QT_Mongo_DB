@@ -3,8 +3,8 @@ from PyQt5.QtCore import QObject, pyqtSignal
 class Model(QObject):
     def __init__(self):
         super().__init__()
-        self.__username = ""
-        self.__password = ""
+        self.__username = "us"
+        self.__password = "ps"
 
     def set_username(self, username):
         self.__username = username
@@ -17,6 +17,3 @@ class Model(QObject):
 
     def get_password(self):
         return self.__password
-
-    def get_credentials(self):
-        self.__password = "pswd"

@@ -49,7 +49,7 @@ class ItemsView(QtWidgets.QDialog):
         self.ui.dbView.installEventFilter(self)
         self._model = model
         self._config=config
-        self.connect_to_Mongo()
+        self.readDB()
 
     def eventFilter(self, source, event):
         if (event.type() == QtCore.QEvent.ContextMenu and event.reason()==0 and source is self.ui.dbView):
@@ -65,15 +65,12 @@ class ItemsView(QtWidgets.QDialog):
         return super(ItemsView,self).eventFilter(source,event)
 
     def switch(self):
-        print(self._model.usr)
         self.switch_window.emit(self.line_edit.text())
 
-    def connect_to_Mongo(self):
-
-        self.mg=mgd.connect(self._config.DB,
-        username=self._model.get_username(),
-        password=self._model.get_password())
-
+    def readDB(self):
+        #self.mg=mgd.connect(self._config.DB,
+        #username=self._model.get_username(),
+        #password=self._model.get_password())
         data=[[x.code, x.desc] for x in Items.objects().all()]
         if len(data)>0:
             model = TableModel(data)
@@ -96,7 +93,6 @@ class ItemForm(QtWidgets.QDialog):
             self.ui.DescIn.setText(self.old_value)
             self.ui.FBtn.clicked.connect(self.btn_click)
         else:
-            print(self.ui.FBtn.buttons(), 'YAAAAAAAAAAs')
             log.info("Kick off New")
             self.old_value='New'
             self.ui.FBtn.clicked.connect(self.btn_click)

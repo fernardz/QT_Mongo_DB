@@ -28,9 +28,6 @@ class Ui_DbView(object):
         self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.connectMongo = QtWidgets.QPushButton(self.verticalLayoutWidget)
-        self.connectMongo.setObjectName("connectMongo")
-        self.verticalLayout.addWidget(self.connectMongo)
         self.CreateItem = QtWidgets.QPushButton(self.verticalLayoutWidget)
         self.CreateItem.setObjectName("CreateItem")
         self.verticalLayout.addWidget(self.CreateItem)
@@ -46,5 +43,4 @@ class Ui_DbView(object):
         _translate = QtCore.QCoreApplication.translate
         DbView.setWindowTitle(_translate("DbView", "Dialog"))
         self.helper.setText(_translate("DbView", "Right Click Item Code to Edit"))
-        self.connectMongo.setText(_translate("DbView", "Connect"))
         self.CreateItem.setText(_translate("DbView", "New"))

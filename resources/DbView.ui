@@ -50,13 +50,6 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QPushButton" name="connectMongo">
-      <property name="text">
-       <string>Connect</string>
-      </property>
-     </widget>
-    </item>
-    <item>
      <widget class="QPushButton" name="CreateItem">
       <property name="text">
        <string>New</string>
