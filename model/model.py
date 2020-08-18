@@ -1,4 +1,4 @@
-from PyQt5.QtCore import QObject, pyqtSignal
+from PyQt5.QtCore import QObject
 
 class Model(QObject):
     def __init__(self):

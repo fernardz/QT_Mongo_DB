@@ -1,0 +1,24 @@
+Folder PATH listing for volume WD1
+Volume serial number is 304B-F2A6
+D:.
+|   app.py
+|   config.py
+|   README.md
+|   tree.txt
+|   update_ui.bat
+|
++---controllers
+|   |   main_ctrl.py
+|
++---model
+|   |   model.py
+|
++---resources
+|   |   DbSub.ui
+|   |   DbView.ui
+|   |   ui_DbSub.py
+|   |   ui_DbView.py
+|
++---views
+|   |   dbs.py
+|   |   login.py
